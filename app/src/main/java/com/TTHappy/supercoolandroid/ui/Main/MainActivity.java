@@ -1,16 +1,21 @@
-package com.TTHappy.supercoolandroid;
+package com.TTHappy.supercoolandroid.ui.Main;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.TTHappy.supercoolandroid.R;
 import com.TTHappy.supercoolandroid.entities.TabEntity;
+import com.TTHappy.supercoolandroid.ui.Main.category.MainFragment;
 import com.TTHappy.supercoolandroid.utils.DisplayUtil;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
+import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +23,8 @@ import java.util.List;
 import butterknife.BindView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private MainFragment fragment;
 
 
     private String[] mTitles = {"首页", "次页", "山治", "我的"};
@@ -37,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
     //tab集合
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
-
     private CommonTabLayout tabLayout;
 
     @Override
@@ -51,12 +57,30 @@ public class MainActivity extends AppCompatActivity {
             mTabEntities.add(new TabEntity(mTitles[i],mSelectedIcons[i],mUnSelectedIcons[i]));
         }
 
-        if(null == tabLayout){
-            tabLayout.setTabData(mTabEntities);
-        }
 
+        final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         tabLayout.setTabData(mTabEntities);
+        tabLayout.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelect(int position) {
+                if(null == fragment){
+                    fragment = MainFragment.getInstance();
+                    Toast.makeText(MainActivity.this, "有没有搞错", Toast.LENGTH_SHORT).show();
+                    transaction.add(R.id.fl_container,fragment,"main");
+                }else {
+                    Toast.makeText(MainActivity.this, "搞错", Toast.LENGTH_SHORT).show();
+                    transaction.show(fragment);
+                }
+                transaction.commit();
+            }
+
+            @Override
+            public void onTabReselect(int position) {
+
+            }
+        });
+
 
 
 

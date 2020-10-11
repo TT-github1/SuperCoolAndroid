@@ -11,8 +11,6 @@ import androidx.fragment.app.Fragment;
 
 import com.TTHappy.supercoolandroid.R;
 
-import java.util.zip.Inflater;
-
 /**
  * Author:      tfhe
  * Create Date: Created in 2020/10/10 18:21
@@ -20,17 +18,17 @@ import java.util.zip.Inflater;
  * Modified By:
  * Description:
  */
-public class MainFragment extends Fragment {
+public class SecondFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_second, container, false);
         return view;
     }
 
-    public static MainFragment getInstance(){
-        return new MainFragment();
+    public static SecondFragment getInstance(){
+        return new SecondFragment();
     }
 
 }

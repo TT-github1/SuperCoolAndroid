@@ -1,15 +1,17 @@
-package com.TTHappy.supercoolandroid.ui.Main;
+package com.TTHappy.supercoolandroid.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.TTHappy.supercoolandroid.R;
 import com.TTHappy.supercoolandroid.entities.TabEntity;
-import com.TTHappy.supercoolandroid.ui.Main.category.MainFragment;
-import com.TTHappy.supercoolandroid.ui.Main.category.SecondFragment;
+import com.TTHappy.supercoolandroid.ui.main.category.MainFragment;
+import com.TTHappy.supercoolandroid.ui.main.category.SecondFragment;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -44,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
     private CommonTabLayout tabLayout;
     private FragmentTransaction transaction;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.common_tab_layout);
+
 
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i],mSelectedIcons[i],mUnSelectedIcons[i]));

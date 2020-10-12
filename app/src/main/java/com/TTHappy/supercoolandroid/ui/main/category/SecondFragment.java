@@ -1,4 +1,4 @@
-package com.TTHappy.supercoolandroid.ui.Main.category;
+package com.TTHappy.supercoolandroid.ui.main.category;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

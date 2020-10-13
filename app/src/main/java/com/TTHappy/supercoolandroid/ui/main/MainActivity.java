@@ -3,20 +3,26 @@ package com.TTHappy.supercoolandroid.ui.main;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 
 import com.TTHappy.supercoolandroid.R;
 import com.TTHappy.supercoolandroid.entities.TabEntity;
 import com.TTHappy.supercoolandroid.ui.main.category.MainFragment;
 import com.TTHappy.supercoolandroid.ui.main.category.SecondFragment;
+import com.TTHappy.supercoolandroid.utils.DisplayUtil;
+import com.TTHappy.supercoolandroid.utils.statuebar.StatusBarUtil;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +56,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        DisplayUtil.setOrientation(this,2);
+        changeAppLanguage(Locale.CHINA);
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_main);
+
+        StatusBarUtil.setTranslucentStatus(this);
 
         tabLayout = findViewById(R.id.common_tab_layout);
 
@@ -124,5 +137,12 @@ public class MainActivity extends AppCompatActivity {
         if(null != fragment4){
             transaction.hide(fragment4);
         }
+    }
+
+    public void changeAppLanguage(Locale locale) {
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        Configuration configuration = getResources().getConfiguration();
+        configuration.setLocale(locale);
+        getResources().updateConfiguration(configuration, metrics);
     }
 }

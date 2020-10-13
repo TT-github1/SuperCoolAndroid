@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.TTHappy.supercoolandroid.R;
+import com.TTHappy.supercoolandroid.utils.bridge.service.BridgeConstants;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 /**
@@ -15,7 +16,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
  * Modified By:
  * Description:
  */
-@Route(path = "/test/test2")
+@Route(path = BridgeConstants.CC_PANEL)
 public class InsttrumentPanelViewActivity extends AppCompatActivity {
 
     @Override

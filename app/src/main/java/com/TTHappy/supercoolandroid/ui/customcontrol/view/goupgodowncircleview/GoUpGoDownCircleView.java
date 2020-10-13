@@ -18,7 +18,7 @@ import androidx.annotation.Nullable;
  * Modified By:
  * Description:
  */
-public class MyGoUpGoDownCircleView extends View {
+public class GoUpGoDownCircleView extends View {
     private Canvas mainCanvas;
     private Paint paint;
     private float littleOvalLeft = 200;
@@ -37,16 +37,16 @@ public class MyGoUpGoDownCircleView extends View {
 
     private RectF littleOval = new RectF();
 
-    public MyGoUpGoDownCircleView(Context context) {
+    public GoUpGoDownCircleView(Context context) {
         super(context);
     }
 
-    public MyGoUpGoDownCircleView(Context context, @Nullable AttributeSet attrs) {
+    public GoUpGoDownCircleView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initView();
     }
 
-    public MyGoUpGoDownCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public GoUpGoDownCircleView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

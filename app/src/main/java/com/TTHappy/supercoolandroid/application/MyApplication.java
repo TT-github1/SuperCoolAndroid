@@ -2,6 +2,7 @@ package com.TTHappy.supercoolandroid.application;
 
 import android.app.Application;
 
+import com.TTHappy.supercoolandroid.utils.DisplayUtil;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 /**
@@ -26,5 +27,6 @@ public class MyApplication extends Application {
             ARouter.openDebug();
         }
         ARouter.init(this);
+        DisplayUtil.initAppDensity(this);
     }
 }

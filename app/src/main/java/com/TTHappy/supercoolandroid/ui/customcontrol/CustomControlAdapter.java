@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.TTHappy.supercoolandroid.R;
 import com.TTHappy.supercoolandroid.entities.CustomControlEntity;
+import com.TTHappy.supercoolandroid.utils.bridge.service.BridgeConstants;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;
@@ -29,12 +30,12 @@ public class CustomControlAdapter extends RecyclerView.Adapter<CustomControlAdap
 
     public CustomControlAdapter(){
         if (list.isEmpty()){
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", "/test/test1"));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", "/test/test2"));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", "/test/test1"));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", "/test/test1"));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", "/test/test2"));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", "/test/test2"));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", BridgeConstants.CC_GUGD));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", BridgeConstants.CC_PANEL));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", BridgeConstants.CC_CHART));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", BridgeConstants.CC_GUGD));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", BridgeConstants.CC_GUGD));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", BridgeConstants.CC_GUGD));
         }
     }
 

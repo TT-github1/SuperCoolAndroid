@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.customcontrol.view.chart.ChartViewActivity"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:gravity="center">
 
     <com.TTHappy.supercoolandroid.ui.customcontrol.view.chart.ChartView
         android:layout_width="360dp"

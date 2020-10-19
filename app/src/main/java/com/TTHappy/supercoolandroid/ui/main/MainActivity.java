@@ -6,17 +6,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.View;
-import android.view.Window;
-import android.widget.ImageView;
 
 import com.TTHappy.supercoolandroid.R;
 import com.TTHappy.supercoolandroid.entities.TabEntity;
+import com.TTHappy.supercoolandroid.ui.main.category.FourthFragment;
 import com.TTHappy.supercoolandroid.ui.main.category.MainFragment;
 import com.TTHappy.supercoolandroid.ui.main.category.SecondFragment;
-import com.TTHappy.supercoolandroid.utils.DisplayUtil;
+import com.TTHappy.supercoolandroid.ui.main.category.ThirdFragment;
 import com.TTHappy.supercoolandroid.utils.statuebar.StatusBarUtil;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -28,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     private MainFragment fragment1;
     private SecondFragment fragment2;
-    private MainFragment fragment3;
-    private MainFragment fragment4;
+    private ThirdFragment fragment3;
+    private FourthFragment fragment4;
 
 
     private String[] mTitles = {"首页", "次页", "山治", "我的"};
@@ -56,11 +53,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        DisplayUtil.setOrientation(this,2);
-        changeAppLanguage(Locale.CHINA);
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-
         setContentView(R.layout.activity_main);
 
         StatusBarUtil.setTranslucentStatus(this);
@@ -94,21 +86,21 @@ public class MainActivity extends AppCompatActivity {
         switch (position){
             case 1: if(null == fragment2){
                         fragment2 = SecondFragment.getInstance();
-                        transaction.add(R.id.fl_container,fragment2,"main");
+                        transaction.add(R.id.fl_container,fragment2,"second");
                     }else {
                         transaction.show(fragment2);
                     }
                     break;
             case 2: if(null == fragment3){
-                        fragment3 = MainFragment.getInstance();
-                        transaction.add(R.id.fl_container,fragment3,"main");
+                        fragment3 = ThirdFragment.getInstance();
+                        transaction.add(R.id.fl_container,fragment3,"third");
                     }else {
                         transaction.show(fragment3);
                     }
                     break;
             case 3: if(null == fragment4){
-                        fragment4 = MainFragment.getInstance();
-                        transaction.add(R.id.fl_container,fragment4,"main");
+                        fragment4 = FourthFragment.getInstance();
+                        transaction.add(R.id.fl_container,fragment4,"fourth");
                     }else {
                         transaction.show(fragment4);
                     }

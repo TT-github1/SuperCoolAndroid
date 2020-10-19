@@ -33,7 +33,7 @@ public class CustomControlAdapter extends RecyclerView.Adapter<CustomControlAdap
             list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", BridgeConstants.CC_GUGD));
             list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", BridgeConstants.CC_PANEL));
             list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", BridgeConstants.CC_CHART));
-            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", BridgeConstants.CC_GUGD));
+            list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "gogo", BridgeConstants.SCROLLVIEW_AND_VIEWPAGER));
             list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_unselected, "xxx", BridgeConstants.CC_GUGD));
             list.add(new CustomControlEntity(R.drawable.bg_tab_fourth_selected, "ggg", BridgeConstants.CC_GUGD));
         }

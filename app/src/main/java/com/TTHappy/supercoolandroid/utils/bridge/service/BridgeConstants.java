@@ -18,4 +18,6 @@ public class BridgeConstants {
     //经典问题
     private static final String QUESTION_PREFIX = "/question/";
     public static final String SCROLLVIEW_AND_VIEWPAGER = QUESTION_PREFIX + "scrollViewAndViewPager";
+    public static final String EQUIPMENTATTRIBUTE = QUESTION_PREFIX + "equipmentAttribute";
+
 }

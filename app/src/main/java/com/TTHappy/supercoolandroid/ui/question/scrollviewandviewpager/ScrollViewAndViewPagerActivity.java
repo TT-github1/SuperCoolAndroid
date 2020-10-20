@@ -24,3 +24,8 @@ public class ScrollViewAndViewPagerActivity extends AppCompatActivity {
 
     }
 }
+
+/**
+ *   滑动冲突解决思路
+ *   https://www.jianshu.com/p/8c635cb59fdf?utm_campaign=maleskine
+ */

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.equipmentattribute.EquipmentAttributesActivity">
+
+    <TextView
+        android:id="@+id/tv_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="屏幕宽高"
+        android:gravity="center"
+        android:background="#eee"/>
+
+    <TextView
+        android:id="@+id/tv_text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="控件宽高"
+        android:gravity="center"
+        android:background="#ccc"/>
+
+    <TextView
+        android:id="@+id/tv_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88F4F4"/>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:text="设备属性"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"/>
+
+</LinearLayout>

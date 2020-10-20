@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     android:gravity="center">
 
-    <com.TTHappy.supercoolandroid.ui.customcontrol.view.chart.ChartView
+    <com.tthappy.supercoolandroid.ui.customcontrol.view.chart.ChartView
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:background="@drawable/edit_text_backgroud"

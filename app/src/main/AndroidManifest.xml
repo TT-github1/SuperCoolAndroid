@@ -3,27 +3,27 @@
     package="com.tthappy.supercoolandroid">
 
     <application
-        android:name="com.tthappy.supercoolandroid.application.MyApplication"
+        android:name=".application.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tthappy.supercoolandroid.ui.equipmentattribute.EquipmentAttributesActivity"></activity>
-<!--        <activity android:name=".ui.jetpack.score.ScoreActivity" />-->
-        <activity android:name="com.tthappy.supercoolandroid.ui.question.scrollviewandviewpager.ScrollViewAndViewPagerActivity" />
-        <activity android:name="com.tthappy.supercoolandroid.ui.main.MainActivity">
+        <activity android:name=".ui.jetpack.score.ScoreActivity"></activity>
+        <activity android:name=".ui.equipmentattribute.EquipmentAttributesActivity" /> <!-- <activity android:name=".ui.jetpack.score.ScoreActivity" /> -->
+        <activity android:name=".ui.question.scrollviewandviewpager.ScrollViewAndViewPagerActivity" />
+        <activity android:name=".ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tthappy.supercoolandroid.ui.customcontrol.CustomControlActivity" />
-        <activity android:name="com.tthappy.supercoolandroid.ui.customcontrol.view.goupgodowncircleview.GoUpGoDownCircleViewActivity" />
-        <activity android:name="com.tthappy.supercoolandroid.ui.customcontrol.view.insttrumentview.InsttrumentPanelViewActivity" />
-        <activity android:name="com.tthappy.supercoolandroid.ui.customcontrol.view.chart.ChartViewActivity" />
+        <activity android:name=".ui.customcontrol.CustomControlActivity" />
+        <activity android:name=".ui.customcontrol.view.goupgodowncircleview.GoUpGoDownCircleViewActivity" />
+        <activity android:name=".ui.customcontrol.view.insttrumentview.InsttrumentPanelViewActivity" />
+        <activity android:name=".ui.customcontrol.view.chart.ChartViewActivity" />
     </application>
 
 </manifest>

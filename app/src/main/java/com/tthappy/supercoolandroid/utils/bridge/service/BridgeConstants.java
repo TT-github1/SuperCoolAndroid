@@ -20,4 +20,8 @@ public class BridgeConstants {
     public static final String SCROLLVIEW_AND_VIEWPAGER = QUESTION_PREFIX + "scrollViewAndViewPager";
     public static final String EQUIPMENTATTRIBUTE = QUESTION_PREFIX + "equipmentAttribute";
 
+    //jetpack
+    private static final String JETPACK_PREFIX = "/jetpack/";
+    public static final String JETPACK_SCORE = JETPACK_PREFIX + "score";
+
 }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.tthappy.supercoolandroid.ui.jetpack.score.ScoreViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.jetpack.score.ScoreActivity">
+
+        <TextView
+            android:id="@+id/tv_team1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@{String.valueOf(data.getScoreTeamA)}"
+            android:onClick="@{()->data.reset()}"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_team2"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_team2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="@{String.valueOf(data.getScoreTeamB)}"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/tv_team1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+1"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamA(1)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_team1"
+            app:layout_constraintEnd_toStartOf="@+id/tv_add2"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+1"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamB(1)}"
+            app:layout_constraintStart_toEndOf="@+id/tv_add1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_team2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add3"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+2"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamA(2)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add1"
+            app:layout_constraintEnd_toStartOf="@+id/tv_add4"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+2"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamB(2)}"
+            app:layout_constraintStart_toEndOf="@+id/tv_add3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add2"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add5"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+3"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamA(3)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add3"
+            app:layout_constraintEnd_toStartOf="@+id/tv_add6"
+            android:background="#52EBFF" />
+
+        <TextView
+            android:id="@+id/tv_add6"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="+3"
+            android:gravity="center"
+            android:onClick="@{()->data.addTeamB(3)}"
+            app:layout_constraintStart_toEndOf="@+id/tv_add5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_add4"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#52EBFF" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

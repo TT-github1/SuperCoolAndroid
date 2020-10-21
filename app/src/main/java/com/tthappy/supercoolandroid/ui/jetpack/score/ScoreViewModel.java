@@ -17,6 +17,7 @@ public class ScoreViewModel extends ViewModel {
     public MutableLiveData<Integer> getScoreTeamA() {
         if(null == scoreTeamA){
             scoreTeamA = new MutableLiveData<>();
+            //在这里做网络请求等
             scoreTeamA.setValue(0);
         }
         return scoreTeamA;

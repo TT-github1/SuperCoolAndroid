@@ -3,6 +3,8 @@ package com.tthappy.supercoolandroid.ui.jetpack.score;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.tthappy.supercoolandroid.ui.test.classtest.NormalTest;
+
 /**
  * Author:      tfhe
  * Create Date: Created in 2020/10/20 18:58
@@ -42,5 +44,9 @@ public class ScoreViewModel extends ViewModel {
     public void reset(){
         scoreTeamA.setValue(0);
         scoreTeamB.setValue(0);
+    }
+
+    public void initNormalTest(){
+        NormalTest.first();
     }
 }

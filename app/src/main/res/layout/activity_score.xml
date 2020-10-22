@@ -91,7 +91,7 @@
             android:layout_height="50dp"
             android:text="+3"
             android:gravity="center"
-            android:onClick="@{()->data.addTeamA(3)}"
+            android:onClick="@{()->data.initNormalTest()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_add3"
             app:layout_constraintEnd_toStartOf="@+id/tv_add6"

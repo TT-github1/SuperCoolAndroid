@@ -7,4 +7,7 @@
     <color name="testColor2">#8CB0F8</color>
     <color name="testColor3">#A5EC8C</color>
     <color name="testColor4">#FBE3A2</color>
+    <color name="main_white">#ffffff</color>
+    <color name="main_blue">#0000ff</color>
+    <color name="main_line" >#ffe5e5e5</color><!-- 用于分割线、按钮描边 -->
 </resources>

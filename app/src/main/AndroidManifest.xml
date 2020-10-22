@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.jetpack.score.ScoreActivity"></activity>
+        <activity android:name=".ui.test.uitest.UITestActivity"></activity>
+        <activity android:name=".ui.jetpack.score.ScoreActivity" />
         <activity android:name=".ui.equipmentattribute.EquipmentAttributesActivity" /> <!-- <activity android:name=".ui.jetpack.score.ScoreActivity" /> -->
         <activity android:name=".ui.question.scrollviewandviewpager.ScrollViewAndViewPagerActivity" />
         <activity android:name=".ui.main.MainActivity">

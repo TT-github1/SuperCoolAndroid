@@ -8,4 +8,25 @@
 <!--        <item name="android:windowTranslucentStatus">true</item>-->
     </style>
 
+    <style name="Line">
+        <item name="android:background">@color/main_line</item>
+    </style>
+
+    <style name="Line.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+    </style>
+
+    <style name="CommonDialogWindowCenterAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/common_dialog_window_center_enter</item>
+        <item name="android:windowExitAnimation">@anim/common_dialog_window_center_outer</item>
+    </style>
+
+    <style name="NoAnimationDialog" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+
+
 </resources>

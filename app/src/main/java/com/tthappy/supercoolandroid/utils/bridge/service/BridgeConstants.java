@@ -24,4 +24,8 @@ public class BridgeConstants {
     private static final String JETPACK_PREFIX = "/jetpack/";
     public static final String JETPACK_SCORE = JETPACK_PREFIX + "score";
 
+    //测试
+    private static final String TEST = "/test/";
+    public static final String UI_TEST = TEST + "ui";
+
 }

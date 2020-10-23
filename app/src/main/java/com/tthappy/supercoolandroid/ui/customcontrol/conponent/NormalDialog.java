@@ -30,7 +30,7 @@ public class NormalDialog extends AppCompatDialog {
         findViewById(R.id.tv_collect_all).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new NoBlingBlingDialog(context).show();
+                new SoNormalDialog(context);
             }
         });
     }

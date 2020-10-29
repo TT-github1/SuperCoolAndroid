@@ -9,5 +9,7 @@
     <color name="testColor4">#FBE3A2</color>
     <color name="main_white">#ffffff</color>
     <color name="main_blue">#0000ff</color>
-    <color name="main_line" >#ffe5e5e5</color><!-- 用于分割线、按钮描边 -->
+    <color name="main_line" >#ffe5e5e5</color>
+    <color name="transparent" >#00000000</color>
+
 </resources>

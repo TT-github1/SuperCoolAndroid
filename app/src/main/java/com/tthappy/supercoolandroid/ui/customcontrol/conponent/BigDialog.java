@@ -1,12 +1,8 @@
 package com.tthappy.supercoolandroid.ui.customcontrol.conponent;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatDialog;
 
@@ -36,7 +32,7 @@ public class BigDialog extends AppCompatDialog {
         mWindow = getWindow();
         mWindow.setDimAmount(.5f);
         mWindow.setBackgroundDrawableResource(R.color.testColor1);
-        mWindow.setGravity(Gravity.TOP);
+        mWindow.setGravity(Gravity.CENTER);
 //        mWindow.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         DisplayUtils.hideDialogStatusBar(getWindow());
     }

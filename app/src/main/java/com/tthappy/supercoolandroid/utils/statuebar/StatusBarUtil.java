@@ -59,10 +59,23 @@ public class StatusBarUtil {
         }
     }
 
+    public static void setStatusBarDarkModeForM(Window window, boolean dark) {
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(Color.TRANSPARENT);
+
+        int systemUiVisibility = window.getDecorView().getSystemUiVisibility();
+        if (dark) {
+            systemUiVisibility |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        } else {
+            systemUiVisibility &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        }
+        window.getDecorView().setSystemUiVisibility(systemUiVisibility);
+    }
+
     /**
      * 设置状态栏透明
      */
-    @TargetApi(19)
     public static void setTranslucentStatus(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             //5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色

@@ -52,7 +52,11 @@ dependencies {
     implementation 'com.alibaba:arouter-api:1.5.0'
     annotationProcessor "com.alibaba:arouter-compiler:1.2.2"
 
+    //recyclerview的第三方adapter库
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+
+    //包括LogUtil的一些工具类
+    implementation 'com.blankj:utilcode:1.13.5'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

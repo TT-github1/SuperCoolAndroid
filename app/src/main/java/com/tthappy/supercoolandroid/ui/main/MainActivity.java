@@ -6,16 +6,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.View;
 
 import com.tthappy.supercoolandroid.R;
 import com.tthappy.supercoolandroid.entities.TabEntity;
 import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
-import com.tthappy.supercoolandroid.ui.main.category.MainFragment;
+import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
 import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
 import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
 import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
-import com.tthappy.supercoolandroid.utils.statuebar.StatusBarUtil;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
@@ -25,7 +23,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private MainFragment fragment1;
+    private HomeFragment fragment1;
     private SecondFragment fragment2;
     private ThirdFragment fragment3;
     private FourthFragment fragment4;
@@ -109,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     break;
             default: if(null == fragment1){
-                        fragment1 = MainFragment.getInstance();
+                        fragment1 = HomeFragment.getInstance();
                         transaction.add(R.id.fl_container,fragment1,"main");
                     }else {
                         transaction.show(fragment1);

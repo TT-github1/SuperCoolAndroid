@@ -25,9 +25,6 @@ public class ScoreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_score);
-//        binding = ActivityScoreBinding.inflate(getLayoutInflater());
-//        View view = binding.getRoot();
-//        setContentView(view);
         ScoreViewModel viewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(ScoreViewModel.class);
         binding.setData(viewModel);
         binding.setLifecycleOwner(this);

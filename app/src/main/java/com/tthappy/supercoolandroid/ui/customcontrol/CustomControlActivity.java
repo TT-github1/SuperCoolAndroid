@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tthappy.supercoolandroid.R;
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
 
 
 /**
@@ -18,7 +19,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
  * Modified By:
  * Description:
  */
-@Route(path = "/test/testone")
+@Route(path = BridgeConstants.SHOW_CUSTOM_CONTROL)
 public class CustomControlActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;

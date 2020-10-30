@@ -5,4 +5,11 @@
         <attr name="coordinateColor" format="color"/>
         <attr name="textCoordinateColor" format="color"/>
     </declare-styleable>
+
+    <!--  圆形控件 -->
+    <declare-styleable name="RoundImageView">
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderOverlay" format="boolean" />
+    </declare-styleable>
 </resources>

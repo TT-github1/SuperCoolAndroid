@@ -11,6 +11,7 @@ public class BridgeConstants {
 
     //自定义控件
     private static final String CUSTOM_CONTROL_PREFIX = "/customcontrol/";
+    public static final String SHOW_CUSTOM_CONTROL = CUSTOM_CONTROL_PREFIX + "showCustomControl";
     public static final String CC_GUGD = CUSTOM_CONTROL_PREFIX + "goUpGoDown";
     public static final String CC_CHART = CUSTOM_CONTROL_PREFIX + "chart";
     public static final String CC_PANEL = CUSTOM_CONTROL_PREFIX + "panel";

@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
 
 import com.tthappy.supercoolandroid.R;
 import com.tthappy.supercoolandroid.entities.TabEntity;
@@ -13,6 +14,7 @@ import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
 import com.tthappy.supercoolandroid.ui.main.category.MainFragment;
 import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
 import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
+import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
 import com.tthappy.supercoolandroid.utils.statuebar.StatusBarUtil;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -55,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        StatusBarUtil.setTranslucentStatus(this);
+        DisplayUtils.setTransparentStatusBar(this);
+        DisplayUtils.setStatusBarFontDarkMode(getWindow(), true);
 
         tabLayout = findViewById(R.id.common_tab_layout);
 

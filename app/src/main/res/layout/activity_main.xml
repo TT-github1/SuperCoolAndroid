@@ -7,20 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <FrameLayout
-        android:id="@+id/fl_container"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintVertical_weight="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/common_tab_layout"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_home"
+        android:scaleType="fitXY"
+        android:alpha="0.3"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="5dp">
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintVertical_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/common_tab_layout"/>
 
 
-    <com.flyco.tablayout.CommonTabLayout
-        android:id="@+id/common_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/common_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

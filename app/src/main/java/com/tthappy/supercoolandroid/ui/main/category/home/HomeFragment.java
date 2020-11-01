@@ -45,7 +45,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void initView(View view){
-        mSearchBar = view.findViewById(R.id.iv_search_bar);
+//        mSearchBar = view.findViewById(R.id.iv_search_bar);
         mRecyclerView = view.findViewById(R.id.rv_list);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(layoutManager);
@@ -66,12 +66,12 @@ public class HomeFragment extends Fragment {
     }
 
     private void initListener(){
-        mSearchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ARouter.getInstance().build("/test/testone").navigation();
-            }
-        });
+//        mSearchBar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                ARouter.getInstance().build("/test/testone").navigation();
+//            }
+//        });
     }
 
 }

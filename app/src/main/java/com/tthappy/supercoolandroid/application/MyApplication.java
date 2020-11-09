@@ -3,6 +3,9 @@ package com.tthappy.supercoolandroid.application;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.Utils;
+import com.tthappy.supercoolandroid.BuildConfig;
 
 /**
  * Author:      tfhe
@@ -25,6 +28,12 @@ public class MyApplication extends Application {
             // 线上版本需要关闭，否则会有安全风险
             ARouter.openDebug();
         }
+
+        //LogUtils的初始化，不写报错
+        Utils.init(this);
+        LogUtils.getConfig().setLogSwitch(BuildConfig.DEBUG);
+
+
         ARouter.init(this);
     }
 }

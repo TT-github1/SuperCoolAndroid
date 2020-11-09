@@ -17,7 +17,6 @@ import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 public class ScoreActivity extends AppCompatActivity {
 
     ActivityScoreBinding binding;
-    NormalDialog normalDialog1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +30,7 @@ public class ScoreActivity extends AppCompatActivity {
     }
 
     private void init(){
-        NormalDialog normalDialog2;
-        if(null == normalDialog1){
-            Log.e("hhh","hhh");
-        }
-        normalDialog2 = null;
-        if(null == normalDialog2 ){
 
-        }
     }
 
 

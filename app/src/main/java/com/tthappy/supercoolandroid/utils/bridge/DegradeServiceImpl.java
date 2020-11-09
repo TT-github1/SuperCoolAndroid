@@ -1,26 +1,18 @@
 package com.tthappy.supercoolandroid.utils.bridge;
 
 import android.content.Context;
-import android.net.Uri;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.facade.service.DegradeService;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.blankj.utilcode.util.LogUtils;
-
-import java.util.Map;
 
 /**
  * Author:      tfhe
  * Create Date: Created in 2020/11/5 17:45
  * Update Date:
  * Modified By:
- * Description:
+ * Description: 降级策略 跳转发生错误会执行这个类的onLost方法
  */
 
 @Route(path = "/degrade/service")

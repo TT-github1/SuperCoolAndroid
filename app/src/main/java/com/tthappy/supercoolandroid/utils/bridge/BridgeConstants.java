@@ -1,4 +1,4 @@
-package com.tthappy.supercoolandroid.utils.bridge.service;
+package com.tthappy.supercoolandroid.utils.bridge;
 
 /**
  * Author:      tfhe

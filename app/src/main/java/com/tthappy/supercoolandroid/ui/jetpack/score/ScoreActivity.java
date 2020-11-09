@@ -6,14 +6,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.tthappy.supercoolandroid.R;
 import com.tthappy.supercoolandroid.databinding.ActivityScoreBinding;
 import com.tthappy.supercoolandroid.ui.customcontrol.conponent.NormalDialog;
-import com.tthappy.supercoolandroid.ui.test.classtest.NormalTest;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 
 @Route(path = BridgeConstants.JETPACK_SCORE)
 public class ScoreActivity extends AppCompatActivity {

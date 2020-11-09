@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.tthappy.supercoolandroid.R;
 import com.tthappy.supercoolandroid.entities.CustomControlEntity;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 import com.alibaba.android.arouter.launcher.ARouter;
 
 import java.util.ArrayList;

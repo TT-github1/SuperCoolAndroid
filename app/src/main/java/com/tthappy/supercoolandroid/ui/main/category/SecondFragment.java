@@ -6,19 +6,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.tthappy.supercoolandroid.R;
 import com.tthappy.supercoolandroid.entities.CustomControlEntity;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 
 import java.util.ArrayList;
 

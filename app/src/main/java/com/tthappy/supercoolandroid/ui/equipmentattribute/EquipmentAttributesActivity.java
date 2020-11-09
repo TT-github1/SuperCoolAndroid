@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.tthappy.supercoolandroid.R;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 @Route(path = BridgeConstants.EQUIPMENTATTRIBUTE)

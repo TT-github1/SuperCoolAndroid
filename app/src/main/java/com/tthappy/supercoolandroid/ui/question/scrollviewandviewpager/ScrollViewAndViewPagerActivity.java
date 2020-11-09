@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.tthappy.supercoolandroid.R;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 @Route(path = BridgeConstants.SCROLLVIEW_AND_VIEWPAGER)

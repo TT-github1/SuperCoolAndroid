@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,15 +30,16 @@ public class HomeFragment extends Fragment {
 
     private ImageView mSearchBar;
     private RecyclerView mRecyclerView;
+    private View viewview;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-        initView(view);
+        viewview = inflater.inflate(R.layout.fragment_main, container, false);
+        initView(viewview);
         initData();
         initListener();
-        return view;
+        return viewview;
     }
 
     public static HomeFragment getInstance(){
@@ -74,4 +76,9 @@ public class HomeFragment extends Fragment {
 //        });
     }
 
+//    @Override
+//    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+//        super.onViewCreated(view, savedInstanceState);
+//        viewview.findViewById(R.id.tv_name).setOnClickListener(v -> Navigation.findNavController(getActivity(), R.id.my_nav_host_fragment).navigate(R.id.action_homefragment_to_secondfragment));
+//    }
 }

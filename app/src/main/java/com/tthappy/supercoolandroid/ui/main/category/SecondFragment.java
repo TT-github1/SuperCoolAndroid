@@ -36,6 +36,10 @@ public class SecondFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_second, container, false);
         recyclerView = view.findViewById(R.id.rv_list);
+        TextView textView = view.findViewById(R.id.text_btn);
+        textView.setOnClickListener(v ->{
+            textView.setText("更有沸雪酌与风云某");
+        });
         Log.e("hhh","oncreateview");
         return view;
     }

@@ -38,6 +38,9 @@
         <activity android:name=".ui.customcontrol.view.goupgodowncircleview.GoUpGoDownCircleViewActivity" />
         <activity android:name=".ui.customcontrol.view.insttrumentview.InsttrumentPanelViewActivity" />
         <activity android:name=".ui.customcontrol.view.chart.ChartViewActivity" />
+        <activity android:name=".ui.jetpack.drawerlayout.DrawerLayoutActivity"/>
+        <activity android:name=".ui.demo.normal.NormalActivity"/>
+        <activity android:name=".ui.jetpack.sample.SampleActivity"/>
     </application>
 
 </manifest>

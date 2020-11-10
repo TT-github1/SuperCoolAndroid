@@ -131,11 +131,4 @@ public class MainActivity extends AppCompatActivity {
             transaction.hide(fragment4);
         }
     }
-
-    public void changeAppLanguage(Locale locale) {
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
-        Configuration configuration = getResources().getConfiguration();
-        configuration.setLocale(locale);
-        getResources().updateConfiguration(configuration, metrics);
-    }
 }

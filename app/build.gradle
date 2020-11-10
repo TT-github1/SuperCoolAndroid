@@ -45,6 +45,8 @@ dependencies {
     //控件绑定
     implementation 'com.jakewharton:butterknife:10.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     //列表
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'

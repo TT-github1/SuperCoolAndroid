@@ -41,6 +41,7 @@
         <activity android:name=".ui.jetpack.drawerlayout.DrawerLayoutActivity"/>
         <activity android:name=".ui.demo.normal.NormalActivity"/>
         <activity android:name=".ui.jetpack.sample.SampleActivity"/>
+        <activity android:name=".ui.demo.old.OldActivity"/>
     </application>
 
 </manifest>

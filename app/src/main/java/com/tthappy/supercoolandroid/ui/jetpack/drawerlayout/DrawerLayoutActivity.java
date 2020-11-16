@@ -27,7 +27,6 @@ import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 @Route(path = BridgeConstants.DRAWER_LAYOUT)
 public class DrawerLayoutActivity extends AppCompatActivity {
 
-    private int currentFragment = 0;
     private NavController navController;
 
     ActivityDrawerLayoutBinding binding;
@@ -40,7 +39,8 @@ public class DrawerLayoutActivity extends AppCompatActivity {
         binding.setData(viewModel);
         binding.setLifecycleOwner(this);
 
-        DisplayUtils.hideStatusBar(this);
+        DisplayUtils.setTransparentStatusBar(this);
+        DisplayUtils.setStatusBarFontDarkMode(getWindow(), true);
 
         init();
     }
@@ -49,8 +49,8 @@ public class DrawerLayoutActivity extends AppCompatActivity {
         binding.myOpenDrawer.setScrimColor(Color.TRANSPARENT);
 
         String[] titles = {"首页", "次页", "三页", "四页"};
-        for (int i = 0; i < titles.length; i++) {
-            binding.tablayout.addTab(binding.tablayout.newTab().setText(titles[i]));
+        for (String title : titles) {
+            binding.tablayout.addTab(binding.tablayout.newTab().setText(title));
         }
         navController = Navigation.findNavController(DrawerLayoutActivity.this, R.id.my_nav_host_fragment);
         binding.tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

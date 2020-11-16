@@ -8,6 +8,7 @@
     tools:context=".ui.main.MainActivity">
 
     <ImageView
+        android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/bg_home"
@@ -16,13 +17,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="5dp">
+        android:layout_height="match_parent">
 
         <FrameLayout
             android:id="@+id/fl_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
             app:layout_constraintVertical_weight="1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/common_tab_layout"/>
@@ -31,7 +32,13 @@
         <com.flyco.tablayout.CommonTabLayout
             android:id="@+id/common_tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
+            android:layout_height="60dp"
+            android:background="#CCB99ECC"
+            app:tl_textsize="24sp"
+            app:tl_indicator_color="#633B78"
+            app:tl_indicator_width="24dp"
+            app:tl_textUnselectColor="#F5ECFA"
+            app:tl_textSelectColor="#3B035E"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 

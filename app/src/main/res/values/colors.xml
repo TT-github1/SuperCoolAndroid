@@ -12,4 +12,6 @@
     <color name="main_line" >#ffe5e5e5</color>
     <color name="transparent" >#00000000</color>
 
+    <color name="text_grey_translate">#80c1c1c2</color>
+    <color name="main_white_translate">#80ffffff</color>
 </resources>

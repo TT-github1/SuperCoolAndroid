@@ -34,5 +34,6 @@ public class BridgeConstants {
     //demo
     private static final String DEMO = "/demo/";
     public static final String NORMAL = DEMO + "normal";
+    public static final String OLD = DEMO + "old";
 
 }

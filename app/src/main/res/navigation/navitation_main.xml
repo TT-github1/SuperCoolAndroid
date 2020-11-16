@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.tthappy.supercoolandroid.ui.main.category.FourthFragment"
+        android:name="com.tthappy.supercoolandroid.ui.jetpack.drawerlayout.section.yi.DrawerLayoutYiFragment"
         android:label="fragment_page1"
-        tools:layout="@layout/fragment_fourth">
+        tools:layout="@layout/fragment_drawer_layout_yi">
     </fragment>
 
     <fragment

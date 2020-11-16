@@ -26,6 +26,7 @@ public class BridgeConstants {
     public static final String JETPACK_SCORE = JETPACK_PREFIX + "score";
     public static final String DRAWER_LAYOUT = JETPACK_PREFIX + "drawerLayout";
     public static final String SAMPLE = JETPACK_PREFIX + "sample";
+    public static final String MOVIE = JETPACK_PREFIX + "movie";
 
     //测试
     private static final String TEST = "/test/";

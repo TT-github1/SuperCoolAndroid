@@ -1,27 +1,24 @@
 package com.tthappy.supercoolandroid.ui.main;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.tthappy.supercoolandroid.R;
-import com.tthappy.supercoolandroid.entities.TabEntity;
-import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
-import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
-import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
-import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
-import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
+import com.tthappy.supercoolandroid.R;
+import com.tthappy.supercoolandroid.entities.TabEntity;
+import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
+import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
+import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
+import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
+import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -125,5 +122,10 @@ public class MainActivity extends AppCompatActivity {
         if(null != fragment4){
             transaction.hide(fragment4);
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

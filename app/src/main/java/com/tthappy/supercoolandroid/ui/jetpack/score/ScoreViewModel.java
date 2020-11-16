@@ -29,28 +29,28 @@ public class ScoreViewModel extends ViewModel {
     private MutableLiveData<Integer> scoreTeamB;
 
     public MutableLiveData<UITestEntity> getScoreTeamA() {
-        if(null == scoreTeamA){
-            scoreTeamA = new MutableLiveData<>();
-            //在这里做网络请求等
-
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl("https://movie.querydata.org/api/")
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .build();
-
-            ApiService api = retrofit.create(ApiService.class);
-            Disposable disposable = api.getData()
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(new Consumer<UITestEntity>() {
-                        @Override
-                        public void accept(UITestEntity uiTestEntity) throws Exception {
-                            e(uiTestEntity.getId());
-                            scoreTeamA.setValue(uiTestEntity);
-                        }
-                    });
-        }
+//        if(null == scoreTeamA){
+//            scoreTeamA = new MutableLiveData<>();
+//            //在这里做网络请求等
+//
+//            Retrofit retrofit = new Retrofit.Builder()
+//                    .baseUrl("https://movie.querydata.org/api/")
+//                    .addConverterFactory(GsonConverterFactory.create())
+//                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+//                    .build();
+//
+//            ApiService api = retrofit.create(ApiService.class);
+//            Disposable disposable = api.getData("1302425")
+//                    .subscribeOn(Schedulers.io())
+//                    .observeOn(AndroidSchedulers.mainThread())
+//                    .subscribe(new Consumer<UITestEntity>() {
+//                        @Override
+//                        public void accept(UITestEntity uiTestEntity) throws Exception {
+//                            e(uiTestEntity.getId());
+//                            scoreTeamA.setValue(uiTestEntity);
+//                        }
+//                    });
+//        }
         return scoreTeamA;
     }
 

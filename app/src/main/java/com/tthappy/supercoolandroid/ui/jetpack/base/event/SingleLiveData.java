@@ -14,7 +14,7 @@ import static com.blankj.utilcode.util.LogUtils.e;
  * Create Date: Created in 2020/11/16 20:12
  * Update Date:
  * Modified By:
- * Description:
+ * Description: 用来解决livedata多次回调
  */
 public class SingleLiveData<T> extends MutableLiveData<T> {
 
@@ -37,12 +37,9 @@ public class SingleLiveData<T> extends MutableLiveData<T> {
         if (hasActiveObservers()) {
             e("SuperCool", "Multiple observers registered but only one will be notified of changes.");
         }
-        super.observe(owner, new Observer<T>() {
-            @Override
-            public void onChanged(T t) {
-                if (pending.compareAndSet(true, false)) {
-                    if(null != t) observer.onChanged(t);
-                }
+        super.observe(owner, t -> {
+            if (pending.compareAndSet(true, false)) {
+                if(null != t) observer.onChanged(t);
             }
         });
     }

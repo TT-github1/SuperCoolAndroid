@@ -13,6 +13,7 @@ import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
 import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
 import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
 import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
+import com.tthappy.supercoolandroid.ui.test.classtest.DaChongMingTest;
 import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
@@ -53,18 +54,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        new DaChongMingTest();
         setContentView(R.layout.activity_main);
-
         DisplayUtils.setTransparentStatusBar(this);
         DisplayUtils.setStatusBarFontDarkMode(getWindow(), true);
-
         tabLayout = findViewById(R.id.common_tab_layout);
-
 
         for (int i = 0; i < mTitles.length; i++) {
             mTabEntities.add(new TabEntity(mTitles[i],mSelectedIcons[i],mUnSelectedIcons[i]));
         }
-
         tabLayout.setTabData(mTabEntities);
         tabLayout.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
@@ -74,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabReselect(int position) {
-
             }
         });
 

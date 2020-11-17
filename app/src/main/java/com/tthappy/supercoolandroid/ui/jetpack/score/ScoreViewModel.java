@@ -47,6 +47,6 @@ public class ScoreViewModel extends ViewModel {
     }
 
     public void initNormalTest(){
-        NormalTest.first();
+//        NormalTest.first();
     }
 }

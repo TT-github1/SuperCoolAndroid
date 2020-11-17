@@ -23,7 +23,7 @@ import com.tthappy.supercoolandroid.R;
 public class DisplayUtils {
 
     /**
-     *  切换状态栏颜色(黑色或者白色）
+     *  切换状态栏文字颜色(黑色或者白色）
      */
     public static void setStatusBarFontDarkMode(Window window, boolean dark) {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

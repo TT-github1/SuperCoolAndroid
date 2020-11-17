@@ -45,6 +45,10 @@ dependencies {
     //控件绑定
     implementation 'com.jakewharton:butterknife:10.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     //列表
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'
@@ -57,6 +61,19 @@ dependencies {
 
     //包括LogUtil的一些工具类
     implementation 'com.blankj:utilcode:1.13.5'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //Room库
+    implementation 'android.arch.persistence.room:runtime:1.0.0'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.0.0'
+
+    //Glide图片下载器
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

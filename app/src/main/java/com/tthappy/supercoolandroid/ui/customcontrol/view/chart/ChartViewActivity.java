@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.tthappy.supercoolandroid.R;
-import com.tthappy.supercoolandroid.utils.bridge.service.BridgeConstants;
+import com.tthappy.supercoolandroid.utils.bridge.BridgeConstants;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 @Route(path = BridgeConstants.CC_CHART)

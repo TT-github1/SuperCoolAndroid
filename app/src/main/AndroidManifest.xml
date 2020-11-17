@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tthappy.supercoolandroid">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
@@ -10,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.test.uitest.UITestActivity"></activity>
+        <activity android:name=".ui.jetpack.movie.MovieActivity"></activity>
+        <activity android:name=".ui.test.uitest.UITestActivity" />
         <activity android:name=".ui.jetpack.score.ScoreActivity" />
         <activity android:name=".ui.equipmentattribute.EquipmentAttributesActivity" /> <!-- <activity android:name=".ui.jetpack.score.ScoreActivity" /> -->
         <activity android:name=".ui.question.scrollviewandviewpager.ScrollViewAndViewPagerActivity" />
@@ -20,11 +23,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app.supercool.com"
+                    android:scheme="tthappy" />
+            </intent-filter>
         </activity>
         <activity android:name=".ui.customcontrol.CustomControlActivity" />
         <activity android:name=".ui.customcontrol.view.goupgodowncircleview.GoUpGoDownCircleViewActivity" />
         <activity android:name=".ui.customcontrol.view.insttrumentview.InsttrumentPanelViewActivity" />
         <activity android:name=".ui.customcontrol.view.chart.ChartViewActivity" />
+        <activity android:name=".ui.jetpack.drawerlayout.DrawerLayoutActivity" />
+        <activity android:name=".ui.demo.normal.NormalActivity" />
+        <activity android:name=".ui.jetpack.sample.SampleActivity" />
+        <activity android:name=".ui.demo.old.OldActivity" />
     </application>
 
 </manifest>

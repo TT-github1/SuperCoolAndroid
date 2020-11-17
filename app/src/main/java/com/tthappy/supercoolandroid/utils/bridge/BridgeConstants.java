@@ -1,4 +1,4 @@
-package com.tthappy.supercoolandroid.utils.bridge.service;
+package com.tthappy.supercoolandroid.utils.bridge;
 
 /**
  * Author:      tfhe
@@ -24,9 +24,17 @@ public class BridgeConstants {
     //jetpack
     private static final String JETPACK_PREFIX = "/jetpack/";
     public static final String JETPACK_SCORE = JETPACK_PREFIX + "score";
+    public static final String DRAWER_LAYOUT = JETPACK_PREFIX + "drawerLayout";
+    public static final String SAMPLE = JETPACK_PREFIX + "sample";
+    public static final String MOVIE = JETPACK_PREFIX + "movie";
 
     //测试
     private static final String TEST = "/test/";
     public static final String UI_TEST = TEST + "ui";
+
+    //demo
+    private static final String DEMO = "/demo/";
+    public static final String NORMAL = DEMO + "normal";
+    public static final String OLD = DEMO + "old";
 
 }

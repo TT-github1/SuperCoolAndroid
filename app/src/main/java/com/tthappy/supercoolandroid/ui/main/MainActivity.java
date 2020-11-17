@@ -1,26 +1,24 @@
 package com.tthappy.supercoolandroid.ui.main;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.res.Configuration;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-
-import com.tthappy.supercoolandroid.R;
-import com.tthappy.supercoolandroid.entities.TabEntity;
-import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
-import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
-import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
-import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
-import com.tthappy.supercoolandroid.ui.test.classtest.DaChongMingTest;
-import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 import com.flyco.tablayout.listener.OnTabSelectListener;
-
+import com.tthappy.supercoolandroid.R;
+import com.tthappy.supercoolandroid.entities.TabEntity;
+import com.tthappy.supercoolandroid.ui.main.category.FourthFragment;
+import com.tthappy.supercoolandroid.ui.main.category.SecondFragment;
+import com.tthappy.supercoolandroid.ui.main.category.ThirdFragment;
+import com.tthappy.supercoolandroid.ui.test.classtest.DaChongMingTest;
+import com.tthappy.supercoolandroid.ui.main.category.home.HomeFragment;
+import com.tthappy.supercoolandroid.utils.app.DisplayUtils;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,27 +26,15 @@ public class MainActivity extends AppCompatActivity {
     private SecondFragment fragment2;
     private ThirdFragment fragment3;
     private FourthFragment fragment4;
-
-
+    
     private String[] mTitles = {"首页", "次页", "山治", "我的"};
-    //tab没有被选中时的图标
-    private int[] mUnSelectedIcons = {
-            R.drawable.bg_tab_main_unselected,
-            R.drawable.bg_tab_second_unselected,
-            R.drawable.bg_tab_third_unselected,
-            R.drawable.bg_tab_fourth_unselected
-    };
-    private int[] mSelectedIcons = {
-            R.drawable.bg_tab_main_selected,
-            R.drawable.bg_tab_second_selected,
-            R.drawable.bg_tab_third_selected,
-            R.drawable.bg_tab_fourth_selected
-    };
+
     //tab集合
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     private CommonTabLayout tabLayout;
     private FragmentTransaction transaction;
+    private ImageView background;
 
 
     @Override
@@ -59,15 +45,21 @@ public class MainActivity extends AppCompatActivity {
         DisplayUtils.setTransparentStatusBar(this);
         DisplayUtils.setStatusBarFontDarkMode(getWindow(), true);
         tabLayout = findViewById(R.id.common_tab_layout);
+        background = findViewById(R.id.background);
 
         for (int i = 0; i < mTitles.length; i++) {
-            mTabEntities.add(new TabEntity(mTitles[i],mSelectedIcons[i],mUnSelectedIcons[i]));
+            mTabEntities.add(new TabEntity(mTitles[i], 0, 0));
         }
         tabLayout.setTabData(mTabEntities);
         tabLayout.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelect(int position) {
                 switchFragment(position);
+                if(position == 0){
+                    background.setVisibility(View.VISIBLE);
+                }else {
+                    background.setVisibility(View.GONE);
+                }
             }
 
             @Override
@@ -129,10 +121,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void changeAppLanguage(Locale locale) {
-        DisplayMetrics metrics = getResources().getDisplayMetrics();
-        Configuration configuration = getResources().getConfiguration();
-        configuration.setLocale(locale);
-        getResources().updateConfiguration(configuration, metrics);
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 }

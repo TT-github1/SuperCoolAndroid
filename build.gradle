@@ -1,18 +1,24 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+/**
+ * buildscript里的是gradle脚本执行所需依赖，分别是对应的maven库和插件。
+ */
 buildscript {
     repositories {
-        google()
-        jcenter()
+        google()                              //从Android Studio3.0后新增了google()配置，可以引用google上的开源项目
+        jcenter()                             //是一个类似于github的代码托管仓库，声明了jcenter()配置，可以轻松引用 jcenter上的开源项目
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
+        classpath "com.android.tools.build:gradle:4.0.1"  //此处是android的插件gradle，gradle是一个强大的项目构建工具
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+/**
+ * allprojects里是项目本身需要的依赖，比如要添加maven中的RxPermissions库，那么应该将maven { url 'https://jitpack.io' }写在这里，而不是buildscript中，不然找不到。
+ */
 allprojects {
     repositories {
         google()
@@ -21,6 +27,25 @@ allprojects {
     }
 }
 
+/**
+ * 运行gradle clean时，执行此处定义的task任务。
+ * 该任务继承自Delete，删除根目录中的build目录。
+ * 相当于执行Delete.delete(rootProject.buildDir)。
+ * gradle使用groovy语言，调用method时可以不用加（）。
+ */
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+/**
+ * Maven是一个项目管理和综合工具，基于项目对象模型（POM）的概念，
+ * 可以通过一小段描述信息来管理项目的构建，报告和文档的软件项目管理工具。
+ * 当然这是官方的解释，用我们自己的话来说，maven就是用来构建和管理项目的，
+ * 就是一个项目的仓库，我们平时使用到的都是最基本的功能，比如自己开发了一个开源工具，
+ * 秉着开源的精神，想要让全世界的人都可以去用，这个时候我们就可以上传到maven中心库，
+ * 这个库是网络上的一个仓库，任何人都可以引用里面的资源，包含了非常多的开源项目。
+ * 再比如我们公司内部写了一些通用组件或者工具，但是又只能内部使用，
+ * 我们就可以搭建公司内部的maven服务器，把这些项目上传上去，
+ * 这样整个公司所有项目都可以轻松的去引用，避免的重复编写拷贝造成的混乱和麻烦。
+ */

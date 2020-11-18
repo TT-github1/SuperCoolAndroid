@@ -37,6 +37,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+
+        applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "SuperCoolAndroid.apk"
+            }
+        }
+
     }
     /**
      *     buildTypes {// 生产/测试环境配置

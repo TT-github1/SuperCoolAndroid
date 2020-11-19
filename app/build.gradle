@@ -8,15 +8,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30          //设置编译时用的Android版本
-    buildToolsVersion "30.0.0"    //设置编译时使用的构建工具的版本
+    compileSdkVersion root.targetsdk          //设置编译时用的Android版本
+    buildToolsVersion root.buildversion    //设置编译时使用的构建工具的版本
 
     defaultConfig {
         applicationId "com.tthappy.supercoolandroid"    //项目的包名
-        minSdkVersion 24                                //项目最低兼容的版本
-        targetSdkVersion 30                             //项目的目标版本
-        versionCode 1                                   //版本号,一般每次打包上线时该值只能增加，打包后看不见。
-        versionName "1.0"                               //版本名称,展示在应用市场上。
+        minSdkVersion root.minsdk                                //项目最低兼容的版本
+        targetSdkVersion root.targetsdk                             //项目的目标版本
+        versionCode root.versioncode                                  //版本号,一般每次打包上线时该值只能增加，打包后看不见。
+        versionName root.versionname                               //版本名称,展示在应用市场上。
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"    //表明要使用AndroidJUnitRunner进行单元测试
         android.defaultConfig.vectorDrawables.useSupportLibrary = true
@@ -214,20 +214,24 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])                  //本地jar包依赖
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'         //远程依赖
+
+    implementation androidx.appcompat                                         //远程依赖
+    implementation androidx.constraintlayout
+    implementation androidx.recyclerview
+    implementation androidx.navigation_fragment
+    implementation androidx.navigation_ui
+    implementation androidx.legacy
+    implementation androidx.lifecycle
+
+
     //首页底部导航栏
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
     //控件绑定
     implementation 'com.jakewharton:butterknife:10.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'androidx.navigation:navigation-fragment:2.3.1'
-    implementation 'androidx.navigation:navigation-ui:2.3.1'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     //列表
-    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'
+//    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'
     //路由
     implementation 'com.alibaba:arouter-api:1.5.0'
     annotationProcessor "com.alibaba:arouter-compiler:1.2.2"

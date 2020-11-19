@@ -1,0 +1,42 @@
+ext.depend = [:]
+
+/*----------------------------------------------------- divider ------------------------------------------------------*/
+
+def root = [:]
+
+root.minsdk = 24
+root.targetsdk = 30
+root.buildversion = "30.0.0"
+root.versioncode = 1
+root.versionname = "1.0"
+
+ext.root = root
+
+/*----------------------------------------------------- divider ------------------------------------------------------*/
+
+def versions = [:]
+
+versions.appcompat = "1.2.0"
+versions.constraintlayout = "2.0.2"
+versions.recyclerview = "1.1.0"
+versions.navigation = "2.3.1"
+versions.lifecycle = "2.2.0"
+versions.legacy = "1.0.0"
+
+ext.version = versions
+
+/*----------------------------------------------------- divider ------------------------------------------------------*/
+
+def androidx = [:]
+
+androidx.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+androidx.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerview"
+androidx.navigation_fragment = "androidx.navigation:navigation-fragment:$versions.navigation"
+androidx.navigation_ui = "androidx.navigation:navigation-ui:$versions.navigation"
+androidx.lifecycle = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+androidx.legacy = "androidx.legacy:legacy-support-v4:$versions.legacy"
+
+ext.androidx = androidx
+
+/*----------------------------------------------------- divider ------------------------------------------------------*/

@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ThirdFragment fragment3;
     private FourthFragment fragment4;
     
-    private String[] mTitles = {"首页", "次页", "山治", "我的"};
+    private String[] mTitles = {"首页", "次页", "三治", "我的"};
 
     //tab集合
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
